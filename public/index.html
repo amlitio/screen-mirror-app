@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Screen Mirror App</title>
+</head>
+<body>
+  <h1>Secure Screen Mirror</h1>
+  
+  <!-- Host section -->
+  <button id="createSession">Create Session</button>
+  <p id="sessionKey"></p>
+  <button id="startShare" disabled>Start Sharing Screen</button>
+  
+  <!-- Viewer section -->
+  <input id="joinKey" placeholder="Enter Session Key">
+  <button id="joinSession">Join Session</button>
+  
+  <video id="localVideo" autoplay playsinline muted></video>
+  <video id="remoteVideo" autoplay playsinline></video>
+  
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
